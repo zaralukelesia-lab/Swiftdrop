@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SwiftDrop | Global Shipping</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+header {
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #1769ff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #172033;
+    font-weight: bold;
+    margin-left: 18px;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #eaf2ff, #ffffff);
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #1769ff;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #5f6b7a;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    padding: 16px 25px;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 6px;
+}
+
+.primary {
+    background: #1769ff;
+    color: white;
+    border: none;
+}
+
+.secondary {
+    background: white;
+    color: #1769ff;
+    border: 2px solid #1769ff;
+}
+
+section {
+    padding: 60px 7%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #687386;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #687386;
+    line-height: 1.5;
+}
+
+.tracking {
+    background: #172033;
+    color: white;
+}
+
+.tracking .subtitle {
+    color: #cbd3df;
+}
+
+.tracking-box {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    gap: 8px;
+}
+
+.tracking-box input {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+footer {
+    background: white;
+    text-align: center;
+    padding: 28px;
+    color: #687386;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .tracking-box {
+        flex-direction: column;
+    }
+
+    .tracking-box button {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Swift<span>Drop</span>
+    </div>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#tracking">Track</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>
+        Shipping Made <span>Simple.</span>
+    </h1>
+
+    <p>
+        SwiftDrop is building a simpler way to send,
+        receive and track parcels and cargo locally
+        and internationally.
+    </p>
+
+    <div class="buttons">
+
+        <button
+            class="primary"
+            onclick="window.location.href='booking.html'">
+            📦 Book a Delivery
+        </button>
+
+        <button
+            class="secondary"
+            onclick="document.getElementById('tracking').scrollIntoView({behavior:'smooth'})">
+            🔎 Track Package
+        </button>
+
+    </div>
+
+</section>
+
+
+<section id="services">
+
+    <h2>Our Services</h2>
+
+    <p class="subtitle">
+        Shipping solutions designed to grow with you.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">📦</div>
+
+            <h3>Parcel Delivery</h3>
+
+            <p>
+                Send packages safely from one destination
+                to another.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🚚</div>
+
+            <h3>Cargo Shipping</h3>
+
+            <p>
+                Solutions for larger shipments and
+                business cargo.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🌍</div>
+
+            <h3>International Shipping</h3>
+
+            <p>
+                Our goal is to connect Kenya with
+                destinations around the world.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📍</div>
+
+            <h3>Shipment Tracking</h3>
+
+            <p>
+                Follow shipments using a unique
+                tracking number.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="tracking" id="tracking">
+
+    <h2>Track Your Shipment</h2>
+
+    <p class="subtitle">
+        Enter your SwiftDrop tracking number below.
+    </p>
+
+    <div class="tracking-box">
+
+        <input
+            type="text"
+            id="trackingNumber"
+            placeholder="Example: SWD-2026-123456">
+
+        <button
+            class="primary"
+            onclick="trackPackage()">
+            Track
+        </button>
+
+    </div>
+
+    <p id="trackingResult" style="margin-top:25px;"></p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 SwiftDrop. Shipping made simple.
+    </p>
+
+</footer>
+
+
+<script>
+
+function trackPackage() {
+
+    const trackingNumber =
+        document.getElementById("trackingNumber").value.trim();
+
+    const result =
+        document.getElementById("trackingResult");
+
+    if (trackingNumber === "") {
+
+        result.innerText =
+            "Please enter a tracking number.";
+
+        return;
+    }
+
+    result.innerText =
+        "We're checking shipment " +
+        trackingNumber +
+        "...";
+
+}
+
+</script>
+
+</body>
+</html>
