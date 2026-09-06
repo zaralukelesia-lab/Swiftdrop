@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SwiftDrop | Book a Shipment</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+header {
+    background: #172033;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header span {
+    color: #4d8dff;
+}
+
+.container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+h2 {
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #687386;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d6dce5;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px;
+    background: #1769ff;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.success {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #eaf7ee;
+    border-radius: 10px;
+}
+
+.tracking {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Swift<span>Drop</span></h1>
+    <p>Book Your Shipment</p>
+</header>
+
+<div class="container">
+
+<div class="form-box">
+
+<h2>Shipment Details</h2>
+
+<p class="subtitle">
+Enter the information below to create your shipment.
+</p>
+
+<form id="bookingForm">
+
+<label>Sender Name</label>
+<input type="text" id="sender" required>
+
+<label>Sender Phone</label>
+<input type="tel" id="senderPhone" required>
+
+<label>Pickup Location</label>
+<input type="text" id="pickup" placeholder="City / Area" required>
+
+<label>Receiver Name</label>
+<input type="text" id="receiver" required>
+
+<label>Receiver Phone</label>
+<input type="tel" id="receiverPhone" required>
+
+<label>Delivery Location</label>
+<input type="text" id="destination" placeholder="City / Country" required>
+
+<label>Shipment Type</label>
+<select id="shipmentType" required>
+    <option value="">Select shipment type</option>
+    <option>Parcel</option>
+    <option>Documents</option>
+    <option>Cargo</option>
+    <option>Fragile Item</option>
+</select>
+
+<label>Approximate Weight (kg)</label>
+<input type="number" id="weight" min="0.1" step="0.1" required>
+
+<label>Shipping Method</label>
+<select id="shippingMethod" required>
+    <option value="">Select shipping method</option>
+    <option>Local Delivery</option>
+    <option>Domestic Cargo</option>
+    <option>International Air</option>
+    <option>International Sea</option>
+</select>
+
+<button type="submit">
+    Create Shipment
+</button>
+
+</form>
+
+<div class="success" id="success">
+
+<h3>✅ Shipment Created!</h3>
+
+<p>Your tracking number is:</p>
+
+<p class="tracking" id="trackingID"></p>
+
+<p style="margin-top:10px;">
+Keep this number safe so you can track your shipment.
+</p>
+
+</div>
+
+</div>
+</div>
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const randomNumber =
+        Math.floor(100000 + Math.random() * 900000);
+
+    const trackingID =
+        "SWD-" + new Date().getFullYear() + "-" + randomNumber;
+
+    document.getElementById("trackingID").innerText =
+        trackingID;
+
+    document.getElementById("success").style.display =
+        "block";
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+
+});
+
+</script>
+
+</body>
+</html>
