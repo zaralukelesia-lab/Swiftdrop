@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftDrop | Global Shipping</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+    }
+
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #1769ff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #172033;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 7%;
+      background: linear-gradient(135deg, #eaf2ff, white);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #1769ff;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #5d687b;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 14px 22px;
+      margin: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: #1769ff;
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: #1769ff;
+      border: 2px solid #1769ff;
+    }
+
+    section {
+      padding: 55px 7%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #687386;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.07);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #687386;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .tracking {
+      background: #172033;
+      color: white;
+    }
+
+    .tracking .subtitle {
+      color: #cbd3df;
+    }
+
+    .tracking-box {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      gap: 8px;
+    }
+
+    .tracking-box input {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    footer {
+      background: white;
+      text-align: center;
+      padding: 25px;
+      color: #687386;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .tracking-box {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Swift<span>Drop</span></div>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#tracking">Track</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Shipping
